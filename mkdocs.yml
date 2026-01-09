@@ -1,0 +1,135 @@
+site_name: Server App Documentation
+site_description: Central documentation for server-app multi-repo ecosystem
+site_author: Onkoto Team
+site_url: https://miltoneo.github.io/server-app-docs/
+
+repo_name: Miltoneo/server-app-docs
+repo_url: https://github.com/Miltoneo/server-app-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+plugins:
+  - search:
+      lang: en
+  - mermaid2
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  
+  - Architecture:
+      - Overview: architecture/overview.md
+      - Multi-Repo Strategy: architecture/multi-repo-strategy.md
+      - Data Flow: architecture/data-flow.md
+      - Technology Stack: architecture/tech-stack.md
+  
+  - Projects:
+      - Overview: projects/overview.md
+      - Construtora: projects/construtora.md
+      - Medicos: projects/medicos.md
+      - Emprestimos: projects/emprestimos.md
+      - SISU: projects/sisu.md
+      - Mais Médicos: projects/maismedicos.md
+      - Rotinas: projects/rotinas.md
+      - Eleição: projects/eleicao.md
+      - TDS (IoT): projects/tds.md
+  
+  - Standards:
+      - Coding Standards: standards/coding-standards.md
+      - Git Workflow: standards/git-workflow.md
+      - API Design: standards/api-design.md
+      - Database Design: standards/database-design.md
+      - Testing Standards: standards/testing.md
+  
+  - Processes:
+      - Onboarding: processes/onboarding.md
+      - Code Review: processes/code-review.md
+      - Deployment: processes/deployment.md
+      - Release Management: processes/release-management.md
+  
+  - Guides:
+      - Getting Started: guides/getting-started.md
+      - Local Setup: guides/local-setup.md
+      - Debugging: guides/debugging.md
+      - Troubleshooting: guides/troubleshooting.md
+  
+  - Migration:
+      - Overview: migration/overview.md
+      - Phase 0: Preparation: migration/phase-0-preparation.md
+      - Phase 1: Extraction: migration/phase-1-extraction.md
+      - Phase 2: CI/CD: migration/phase-2-cicd.md
+      - Phase 3: Optimization: migration/phase-3-optimization.md
+      - Phase 4: Archival: migration/phase-4-archival.md
+      - Lessons Learned: migration/lessons-learned.md
+  
+  - ADR:
+      - What is ADR?: adr/what-is-adr.md
+      - ADR-0001: Multi-Repo: adr/0001-multi-repo.md
+      - ADR-0002: Shared Library: adr/0002-shared-library.md
+      - Template: adr/template.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Miltoneo
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Replace with actual GA4 ID
+
+copyright: Copyright &copy; 2024-2026 Onkoto Team
