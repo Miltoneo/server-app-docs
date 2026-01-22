@@ -75,6 +75,7 @@ nav:
   
   - Architecture:
       - Overview: architecture/overview.md
+      - Nginx Configuration: architecture/nginx-configuration.md
       - Multi-Repo Strategy: architecture/multi-repo-strategy.md
       - Data Flow: architecture/data-flow.md
       - Technology Stack: architecture/tech-stack.md
